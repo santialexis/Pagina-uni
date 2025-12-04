@@ -1,7 +1,7 @@
 body {
     font-family: 'Courier New', Courier, monospace;
-    background-color: #1e1e1e; /* Fondo oscuro */
-    color: #d4d4d4; /* Texto claro */
+    background-color: #1e1e1e;
+    color: #d4d4d4;
     margin: 0;
     padding: 0;
     display: flex;
@@ -9,17 +9,19 @@ body {
     align-items: center;
     justify-content: center;
     height: 100vh;
+    text-align: center;
 }
 
 /* input */
 input[type="text"] {
     background-color: #1a1a1a;
-    color: #00ff00; /* Verde estilo terminal */
+    color: #00ff00;
     border: 2px solid #00ff00;
     padding: 12px;
     border-radius: 8px;
     font-size: 16px;
-    width: 320px;
+    width: 90%;
+    max-width: 400px;
     margin-bottom: 15px;
     box-shadow: 0 0 10px rgba(0, 255, 0, 0.5);
     outline: none;
@@ -42,6 +44,8 @@ button {
     cursor: pointer;
     transition: transform 0.2s, box-shadow 0.3s;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+    width: 90%;
+    max-width: 200px;
 }
 
 button:hover {
@@ -67,14 +71,15 @@ div:not([hidden]) {
     padding: 15px;
     border-radius: 5px;
     margin-top: 10px;
-    width: 300px;
+    width: 90%;
+    max-width: 400px;
     text-align: center;
 }
 
 /* pistas */
 #pista {
     background-color: #333333;
-    color: #00ff00; /* Verde estilo terminal */
+    color: #00ff00;
     border: 1px solid #00ff00;
     padding: 10px;
     border-radius: 5px;
@@ -85,11 +90,11 @@ div:not([hidden]) {
 
 /* titulos */
 h1 {
-    font-family: 'Press Start 2P', cursive; /* Nueva fuente para títulos */
+    font-family: 'Press Start 2P', cursive;
     color: #00ff00;
     text-transform: uppercase;
     letter-spacing: 2px;
-    font-size: 2rem;
+    font-size: 1.5rem;
     margin-bottom: 20px;
 }
 
@@ -101,4 +106,22 @@ a{
 
 a:hover{
     text-decoration: underline;
+}
+
+/* error */
+#error {
+    color: red;
+    font-size: 14px;
+    margin-top: 10px;
+}
+
+@media (max-width: 768px) {
+    h1 {
+        font-size: 1.2rem; 
+    }
+
+    input[type="text"], button, div:not([hidden]) {
+        font-size: 14px;
+        padding: 10px;
+    }
 }

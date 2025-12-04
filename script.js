@@ -18,8 +18,6 @@ document.body.appendChild(pistaDiv)
 /*div clave incorrecta*/
 const errorDiv = document.createElement("div")
 errorDiv.id = "error"
-errorDiv.style.color = "red"
-errorDiv.style.marginTop = "10px"
 errorDiv.hidden = true
 document.body.appendChild(errorDiv)
 
