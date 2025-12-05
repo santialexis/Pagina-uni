@@ -1,9 +1,9 @@
 const claves = {
-    "sistema" : "pista: la clave es \"computadora\"",
-    "computadora" : "pista: la clave es \"redes\"",
-    "redes" : "pista: la clave es \"programacion\"",
-    "programacion" : "pista: la clave es \"algoritmo\"",
-    "algoritmo" : "pista: la clave es \"codigo\""
+    "sistema" : "La segunda clave se encuentra en un pasillo cercano al cartel de \"¡Me recibi!\". Pista: busca las Aulas 200",
+    "computadora" : "La tercera clave se encuentra en un edificio rojo de dos plantas. Pista: esta enfrente del pasillo de las Aulas 200.",
+    "redes" : "La cuarta clave se encuentra en un pasillo ubicado al lado del escenario. Pista: busca las Aulas 300",
+    "programacion" : "La quinta y anteultima clave se encuentra en un gran edificio frente a la Aulas 300. Pista: lugar para leer en silencio.",
+    "algoritmo" : "La ultima clave se encuentra en un pasillo cercano a las Aulas 300. Pista: busca un cartel de ERROR! muy conocido en internet."
 }
 
 const ordenClaves = ["sistema", "computadora", "redes","programacion","algoritmo","codigo"]
@@ -15,7 +15,7 @@ const input = document.getElementById("clave")
 /*div pistas*/
 const pistaDiv = document.createElement("div")
 pistaDiv.id = "pista"
-pistaDiv.textContent = "1º Pista: la clave se encuentra en el edificio central, donde haya libros a la vista."
+pistaDiv.textContent = "La primera clave se encuentra en el edificio central, donde haya variedad de libros a la vista. Pista: busca las Aulas 100"
 document.body.appendChild(pistaDiv)
 
 /*div clave incorrecta*/
