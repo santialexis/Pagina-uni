@@ -1,10 +1,15 @@
 const claves = {
-                "inicio" : "pista a clave 1",
-                "clave 1" : "pista a clave 2",
-                "clave 2" : "pista a clave 3",
-                "clave 3" : "pista a clave 4",
-                "clave 4" : "pista a clave 5"
+                "inicio" : "pista: la clave es \"clave 1\"",
+                "clave 1" : "pista: la clave es \"clave 2\"",
+                "clave 2" : "pista: la clave es \"clave 3\"",
+                "clave 3" : "pista: la clave es \"clave 4\"",
+                "clave 4" : "pista: la clave es \"clave 5\"",
+                "clave 5" : "pista: la clave es \"clave 6\"",
+                "clave 6": "¡Felicidades! Has completado el juego."
             }
+
+const ordenClaves = ["clave 1", "clave 2", "clave 3", "clave 4","clave 5","clave 6"]
+let progreso = 0
 
 const boton = document.getElementById("boton")
 const input = document.getElementById("clave")
@@ -21,17 +26,19 @@ errorDiv.id = "error"
 errorDiv.hidden = true
 document.body.appendChild(errorDiv)
 
-/*div primera pista*/
-pistaDiv.textContent = claves["inicio"]
-pistaDiv.hidden = false
-
 boton.addEventListener("click", () => {
-    const passwd = input.value.toLowerCase()
-    if (claves[passwd]) {
-        pistaDiv.textContent = claves[passwd]
-        errorDiv.hidden = true
-    } else {
-        errorDiv.textContent = "Error 404: Clave incorrecta"
-        errorDiv.hidden = false
+    const passwd = input.value.toLowerCase().trim()
+    if(passwd === ordenClaves[progreso]){ // Clave correcta en el orden esperado
+        if (passwd === "clave 6") {
+            document.body.innerHTML = "<h1>¡Felicidades! Has completado el juego.</h1>";
+        } else {
+            pistaDiv.textContent = claves[passwd];
+            errorDiv.hidden = true;
+            progreso++;
+            input.value = "";
+        }
+    } else { //clave incorrecta
+        errorDiv.textContent = "Error 404: Clave incorrecta";
+        errorDiv.hidden = false;
     }
 })

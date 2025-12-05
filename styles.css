@@ -12,7 +12,6 @@ body {
     text-align: center;
 }
 
-/* input */
 input[type="text"] {
     background-color: #1a1a1a;
     color: #00ff00;
@@ -33,7 +32,6 @@ input[type="text"]:focus {
     box-shadow: 0 0 15px rgba(0, 122, 204, 0.7);
 }
 
-/* boton */
 button {
     background: linear-gradient(90deg, #007acc, #005a9e);
     color: #ffffff;
@@ -58,12 +56,10 @@ button:active {
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
 }
 
-/* divs ocultos */
 div[hidden] {
     display: none;
 }
 
-/* divs visibles */
 div:not([hidden]) {
     background-color: #252526;
     color: #d4d4d4;
@@ -76,7 +72,6 @@ div:not([hidden]) {
     text-align: center;
 }
 
-/* pistas */
 #pista {
     background-color: #333333;
     color: #00ff00;
@@ -88,7 +83,6 @@ div:not([hidden]) {
     text-align: center;
 }
 
-/* titulos */
 h1 {
     font-family: 'Press Start 2P', cursive;
     color: #00ff00;
@@ -97,17 +91,17 @@ h1 {
     margin-bottom: 20px;
 }
 
-/* enlaces */
 a{
     color: #569cd6;
     text-decoration: none;
+    margin-top: 20px;
+    display: inline-block;
 }
 
 a:hover{
     text-decoration: underline;
 }
 
-/* error */
 #error {
     color: red;
     font-size: 14px;
