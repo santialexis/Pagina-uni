@@ -1,6 +1,10 @@
 body {
     font-family: 'Courier New', Courier, monospace;
-    background-color: #1e1e1e;
+    background: url('img/esfera-malla-verde-vectorial-abstracto-estilo-tecnologia-futurista-fondo-elegante-presentaciones.png'), #121212;
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+    animation: gradientBG 10s ease infinite;
     color: #d4d4d4;
     margin: 0;
     padding: 10px;
@@ -103,21 +107,33 @@ h1 {
     font-family: 'Press Start 2P', cursive;
     color: #00ff00;
     letter-spacing: 1px;
-    font-size: 1.2rem;
+    font-size: 1.5rem;
     margin-bottom: 20px;
     margin-top: 0;
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 10px;
+    border-radius: 8px;
+    box-shadow: 0 0 15px rgba(0, 255, 0, 0.5);
+    text-align: center;
 }
 
-a{
-    color: #569cd6;
+a {
+    color: #00ff00;
     text-decoration: none;
     margin-top: 20px;
     display: inline-block;
-    font-size: 14px;
+    font-size: 16px;
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 8px 12px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 255, 0, 0.5);
+    transition: box-shadow 0.3s ease-in-out, transform 0.2s ease-in-out;
 }
 
-a:hover{
+a:hover {
     text-decoration: underline;
+    box-shadow: 0 0 15px rgba(0, 255, 0, 0.8); 
+    transform: scale(1.05);
 }
 
 #error {
