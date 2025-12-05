@@ -27,7 +27,7 @@ document.body.appendChild(errorDiv)
 boton.addEventListener("click", () => {
     const passwd = input.value.toLowerCase().trim()
     if(passwd === ordenClaves[progreso]){ // Clave correcta en el orden esperado
-        if (passwd === "algoritmo") {
+        if (passwd === "codigo") {
             document.body.innerHTML = `
                 <h1>¡Felicidades! Has completado el juego.</h1>
                 <div>
