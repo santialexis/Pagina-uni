@@ -1,13 +1,12 @@
 const claves = {
-                "inicio" : "pista: la clave es \"clave 1\"",
-                "clave 1" : "pista: la clave es \"clave 2\"",
-                "clave 2" : "pista: la clave es \"clave 3\"",
-                "clave 3" : "pista: la clave es \"clave 4\"",
-                "clave 4" : "pista: la clave es \"clave 5\"",
-                "clave 5" : "pista: la clave es \"clave 6\""
-            }
+    "sistema" : "pista: la clave es \"computadora\"",
+    "computadora" : "pista: la clave es \"redes\"",
+    "redes" : "pista: la clave es \"programacion\"",
+    "programacion" : "pista: la clave es \"algoritmo\"",
+    "algoritmo" : "pista: la clave es \"codigo\""
+}
 
-const ordenClaves = ["clave 1", "clave 2", "clave 3", "clave 4","clave 5","clave 6"]
+const ordenClaves = ["sistema", "computadora", "redes","programacion","algoritmo","codigo"]
 let progreso = 0
 
 const boton = document.getElementById("boton")
@@ -16,7 +15,7 @@ const input = document.getElementById("clave")
 /*div pistas*/
 const pistaDiv = document.createElement("div")
 pistaDiv.id = "pista"
-pistaDiv.textContent = claves["inicio"]
+pistaDiv.textContent = "1º Pista: la clave se encuentra en el edificio central, donde haya libros a la vista."
 document.body.appendChild(pistaDiv)
 
 /*div clave incorrecta*/
@@ -28,7 +27,7 @@ document.body.appendChild(errorDiv)
 boton.addEventListener("click", () => {
     const passwd = input.value.toLowerCase().trim()
     if(passwd === ordenClaves[progreso]){ // Clave correcta en el orden esperado
-        if (passwd === "clave 6") {
+        if (passwd === "algoritmo") {
             document.body.innerHTML = `
                 <h1>¡Felicidades! Has completado el juego.</h1>
                 <div>
