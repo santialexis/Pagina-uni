@@ -31,14 +31,16 @@ boton.addEventListener("click", () => {
         if (passwd === "clave 6") {
             document.body.innerHTML = `
                 <h1>¡Felicidades! Has completado el juego.</h1>
-                <p>
-                    Has demostrado tus habilidades en este desafío de búsqueda del tesoro en la UNLu. 
-                    Esperamos que hayas disfrutado de la aventura y aprendido algo nuevo en el camino.
-                </p>
-                <p>
-                    Por favor, regresa al puesto de donde comenzaste para recibir tu recompensa. 
-                    ¡Gracias por participar y sigue explorando el mundo de la informática!
-                </p>
+                <div>
+                    <p>
+                        Has demostrado tus habilidades en este desafío de búsqueda del tesoro en la UNLu. 
+                        Esperamos que hayas disfrutado de la aventura y aprendido algo nuevo en el camino.
+                    </p>
+                    <p>
+                        Por favor, regresa al puesto de donde comenzaste para recibir tu recompensa. 
+                        ¡Gracias por participar y sigue explorando el mundo de la informática!
+                    </p>
+                </div>
                 <a href="https://www.unlu.edu.ar/carg-sistemas.html" target="_blank">Conoce más sobre la Licenciatura en Sistemas de Información</a>
             `;
         } else {
